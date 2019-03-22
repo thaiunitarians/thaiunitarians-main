@@ -1,6 +1,7 @@
 import React from "react"
 
 import Header from "./header"
+import Footer from "./footer"
 import Layout from './layout'
 
 class Base extends React.Component{
@@ -29,11 +30,7 @@ class Base extends React.Component{
                 <Layout>
                     {this.props.children}
                 </Layout>
-                <footer>
-                    © {new Date().getFullYear()}, Built with
-                    {` `}
-                    <a href="https://www.gatsbyjs.org">Gatsby</a>
-                </footer>
+                <Footer {...this.state} {...this.actions}/>
             </>
         );
     }
