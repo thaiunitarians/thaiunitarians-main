@@ -1,36 +1,69 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import "./style.css"
+import "./header.css"
 
 const headerLogo = require("../images/logo.png");
 
-const Header = () => (
+const MenuItems = (language)=>{
+  if (language==="th"){
+    return{
+      home: "หน้าหลัก",
+      about: "เกี่ยวกับยูนิทาเรี่ยน",
+      resources: "คลังข้อมูล",
+      involved: "การมีส่วนร่วม",
+      blog: "บล็อค",
+      contact: "ติดต่อ",
+      button: "English"
+    }
+  }else{
+    return{
+      home: "Home",
+      about: "About Unitarianism",
+      resources: "Resources",
+      involved: "Get Involved",
+      blog: "Blogs",
+      contact: "Contact",
+      button: "ภาษาไทย"
+    }
+  }
+}
+
+const Header = (props) => (
 
   <header className="header">
     <div className="headerMenu">
       <div>
-        Home
+        {MenuItems(props.language).home}
       </div>
       <div>
-        About Unitarianism
+        {MenuItems(props.language).about}
       </div>
       <div>
-        Resources
+        {MenuItems(props.language).resources}
       </div>
     </div>
     <img className="headerLogo" src={headerLogo}/>
     <div className="headerMenu">
       <div>
-        Get Involved
+        {MenuItems(props.language).involved}
       </div>
       <div>
-        Blogs
+        {MenuItems(props.language).blog}
       </div>
       <div>
-        Contact
+        {MenuItems(props.language).contact}
       </div>
     </div>
+    <button className="headerLanguageButton" onClick={()=>{
+      if (props.language === "en"){
+        props.setLanguage("th");
+      }else{
+        props.setLanguage("en");
+      }
+    }}>
+      {MenuItems(props.language).button}
+    </button>
   </header>
 )
 

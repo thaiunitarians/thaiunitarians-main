@@ -18,10 +18,26 @@
 .headerMenu > div {
     margin-top: 10px;
     text-align: center;
+    color: #3777ca;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
 }
 
 .headerLogo {
     margin-left: 20px;
     margin-right: 20px;
     max-height: 220px;
+}
+
+.headerLanguageButton {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-style: outset;
+    border-width: 1px;
+    font-size: 0.7em;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
