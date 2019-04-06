@@ -7,6 +7,19 @@ import Base from "../components/base"
 import SEO from "../components/seo"
 import "../components/style.css"
 
+const LinkBox = (props) =>{
+  const {to, img} = props;
+
+  return (
+    <div className="linkbox">
+      <Link to={to}>{props.img}</Link>
+      <div className="linkboxArea">
+        {props.children}
+      </div>      
+    </div>
+  );
+}
+
 const IndexPage = (props) => {
   const {t, i18n, data} = props;
 
@@ -29,7 +42,25 @@ const IndexPage = (props) => {
 
       <p className="subheader">{t("index.subheader")}</p>
 
-      <Link to="/page-2/">Go to page 2</Link>
+      <div className="linkList">
+        <LinkBox img={<Img fluid={data.aboutcover.childImageSharp.fluid}/>} to="/about/">
+          <h2 className="linkheader">{t("index.about")}</h2>
+          <p>{t("index.aboutDescription")}</p>
+          <Link to="/about/">{t("index.readmore")}</Link>
+        </LinkBox>
+
+        <LinkBox img={<Img fluid={data.historycover.childImageSharp.fluid}/>} to="/history/">
+          <h2 className="linkheader">{t("index.history")}</h2>
+          <p>{t("index.historyDescription")}</p>
+          <Link to="/history/">{t("index.readmore")}</Link>
+        </LinkBox>
+
+        <LinkBox img={<Img fluid={data.involvedcover.childImageSharp.fluid}/>} to="/get-involved/">
+          <h2 className="linkheader">{t("index.involved")}</h2>
+          <p>{t("index.involvedDescription")}</p>
+          <Link to="/get-involved/">{t("index.readmore")}</Link>
+        </LinkBox>
+      </div>
     </Base>
     )
 }
@@ -74,6 +105,27 @@ export const query = graphql`
     slide3th: file(relativePath: { eq: "slide3-th.jpg"}) {
       childImageSharp {
         fluid(maxWidth: 1000){
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    aboutcover: file(relativePath: { eq: "cover1.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 600){
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    historycover: file(relativePath: { eq: "cover2.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 600){
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    involvedcover: file(relativePath: { eq: "cover3.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 600){
           ...GatsbyImageSharpFluid
         }
       }
