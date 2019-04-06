@@ -31,7 +31,7 @@ class Base extends React.Component{
         return (
             <>
                 <Header {...this.state} {...this.actions}/>
-                <Layout>
+                <Layout {...this.state}>
                     {this.props.children}
                 </Layout>
                 <Footer {...this.state} {...this.actions}/>

@@ -9,22 +9,10 @@ const headerLogo = require("../images/logo.png");
 const MenuItems = (language)=>{
   if (language==="th"){
     return{
-      home: "หน้าหลัก",
-      about: "เกี่ยวกับยูนิทาเรี่ยน",
-      resources: "คลังข้อมูล",
-      involved: "การมีส่วนร่วม",
-      blog: "บล็อค",
-      contact: "ติดต่อ",
       button: "English"
     }
   }else{
     return{
-      home: "Home",
-      about: "About Unitarianism",
-      resources: "Resources",
-      involved: "Get Involved",
-      blog: "Blogs",
-      contact: "Contact",
       button: "ภาษาไทย"
     }
   }
