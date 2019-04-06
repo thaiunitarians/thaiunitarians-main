@@ -5,6 +5,7 @@ import { withTranslation } from 'react-i18next';
 
 import Base from "../components/base"
 import SEO from "../components/seo"
+import "../components/style.css"
 
 const IndexPage = (props) => {
   const {t, i18n, data} = props;
@@ -21,6 +22,12 @@ const IndexPage = (props) => {
     <Base>
       <SEO title="Home" keywords={[`thaiunitarians`, `unitarian`, `universalist`]} />
       <Img fluid={poster} />
+
+      <div className="saparator"/>
+
+      <h1 className="header">{t("index.header")}</h1>
+
+      <p className="subheader">{t("index.subheader")}</p>
 
       <Link to="/page-2/">Go to page 2</Link>
     </Base>

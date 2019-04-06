@@ -7,5 +7,9 @@
         "blog": "Blogs",
         "contact": "Contact",
         "button": "ภาษาไทย"
+    },
+    "index": {
+        "header": "Freedom · Reason · Tolerance",
+        "subheader": "Unitarianism is an open-minded religion that encourages religion freedom and individual quest for truth. We recognise that it is a person's right to freely find their own belief through their own reason, while respecting the beliefs of others."
     }
 }
