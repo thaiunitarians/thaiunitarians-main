@@ -1,6 +1,6 @@
-import React from "react"
-import { Link, StaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import React from "react";
+import { Link, graphql } from "gatsby";
+import Img from "gatsby-image";
 import { withTranslation } from 'react-i18next';
 
 import Base from "../components/base"
@@ -12,7 +12,7 @@ const LinkBox = (props) =>{
 
   return (
     <div className="linkbox">
-      <Link to={to}>{props.img}</Link>
+      <Link to={to}>{img}</Link>
       <div className="linkboxArea">
         {props.children}
       </div>      

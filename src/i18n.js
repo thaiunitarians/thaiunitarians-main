@@ -12,7 +12,7 @@ i18n
     lng: "en",
 
     // // have a common namespace used around the full app
-    ns: ["common"],
+    ns: ["common", "about"],
     defaultNS: "common",
     Backend: {
       loadPath: '/locales/{{lng}}/{{ns}}.json'
