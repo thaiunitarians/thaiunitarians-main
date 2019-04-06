@@ -1,0 +1,56 @@
+.header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.subheader {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    text-align: center;
+}
+
+.saparator {
+    height: 50px;
+    display: block;
+}
+
+.linkList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.linkbox {
+    /* background-color: aqua; */
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: block;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+}
+
+.linkboxArea {
+    padding: 20px;
+}
+
+.linkbox a {
+    color: inherit;
+}
+
+.linkheader {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .linkbox {
+        width: 30%;
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+        display: inline-block;
+    }
+} 
